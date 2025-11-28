@@ -327,7 +327,38 @@ section.block {background:linear-gradient(180deg,#fff,#fffaf9);padding:14px;bord
   .testi-card img { width: 100%; height: auto; border-radius: 10px; }
 }
 
-@media (max-width:980px){ .giant-card .imgwrap{height:200px} .pc-header{flex-direction:column;align-items:flex-start} }
+@media (max-width:980px){
+  #salchicha .pc-header .cover,
+  #cover-prod1 {
+    max-width: 260px;
+    margin-bottom: 8px;
+  }
+  #salchicha .pc-header { flex-direction: column; align-items: flex-start; gap:12px; }
+}
+
+#miaumoo .pc-header .cover,
+#cover-prod2 {
+  width: 100%;            /* ocupa todo el ancho disponible dentro del header */
+  max-width: 420px;       /* mismo límite que Salchicha (ajústalo si quieres) */
+  height: auto;           /* mantiene proporción original */
+  object-fit: contain;    /* muestra la imagen completa sin recortar */
+  object-position: center center;
+  display: block;
+  border-radius: 12px;
+  border: 6px solid rgba(255,255,255,0.6); /* mantiene el mismo estilo de borde */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Mismo comportamiento responsive que Salchicha */
+@media (max-width:980px){
+  #miaumoo .pc-header .cover,
+  #cover-prod2 {
+    max-width: 260px;
+    margin-bottom: 8px;
+  }
+  #miaumoo .pc-header { flex-direction: column; align-items: flex-start; gap:12px; }
+}
+
 </style>
 </head>
 <body>
@@ -764,3 +795,4 @@ hideAll();
 </script>
 </body>
 </html>
+
